@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/skills', function () {
     return ["php","javascript","less"];
 });
+
+Route::get('/vue/{vue_capture?}', function () {
+    return view('/login');
+})->where('vue_capture', '[\/\w\.-]*');
